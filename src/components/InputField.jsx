@@ -1,12 +1,10 @@
-import React from 'react';
-
-const InputField = ({ text, handleInput, handleSubmit }) => {
+const TodoList = ({ value, updateText, handleAction }) => {
   return (
     <label>
-      <input value={text} onChange={(event) => handleInput(event.target.value)} />
-      <button onClick={handleSubmit}>Add todo</button>
+      <input placeholder="new todo" value={value} onChange={(e) => updateText(e.target.value)} />
+      <button onClick={handleAction}>Add todo</button>
     </label>
   );
 };
 
-export default InputField;
+export default TodoList;
